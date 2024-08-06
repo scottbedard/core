@@ -12,6 +12,9 @@ catalogs:
     '@babel/types':
       specifier: ^7.24.7
       version: 7.24.7
+    '@vitejs/plugin-vue':
+      specifier: ^5.1.2
+      version: 5.1.2
     estree-walker:
       specifier: ^2.0.2
       version: 2.0.2
@@ -217,8 +220,8 @@ importers:
         version: link:../../packages/vue
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: ^5.1.1
-        version: 5.1.1(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)
+        specifier: 'catalog:'
+        version: 5.1.2(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)
       vite:
         specifier: 'catalog:'
         version: 5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1)
@@ -235,8 +238,8 @@ importers:
   packages-private/vite-test:
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: ^5.1.1
-        version: 5.1.1(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)
+        specifier: 'catalog:'
+        version: 5.1.2(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)
       vite:
         specifier: 'catalog:'
         version: 5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1)
@@ -1282,8 +1285,8 @@ packages:
     resolution: {integrity: sha512-oN0K4nkHuOyF3PVMyETbpP5zp6wfyOvm7tWhTMfoqxSSsPmJIh6JNASuZDlODE8eE+0EB9uar+6+vxr9DBTYOA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitejs/plugin-vue@5.1.1':
-    resolution: {integrity: sha512-sDckXxlHpMsjRQbAH9WanangrfrblsOd3pNifePs+FOHjJg1jfWq5L/P0PsBRndEt3nmdUnmvieP8ULDeX5AvA==}
+  '@vitejs/plugin-vue@5.1.2':
+    resolution: {integrity: sha512-nY9IwH12qeiJqumTCLJLE7IiNx7HZ39cbHaysEUd+Myvbz9KAqd2yq+U01Kab1R/H1BmiyM2ShTYlNH32Fzo3A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
@@ -4297,7 +4300,7 @@ snapshots:
       '@typescript-eslint/types': 8.0.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-vue@5.1.1(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)':
+  '@vitejs/plugin-vue@5.1.2(vite@5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1))(vue@packages+vue)':
     dependencies:
       vite: 5.3.3(@types/node@20.14.13)(sass@1.77.8)(terser@5.31.1)
       vue: link:packages/vue
