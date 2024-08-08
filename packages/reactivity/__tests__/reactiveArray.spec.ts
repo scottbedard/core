@@ -233,6 +233,17 @@ describe('reactivity/reactive/Array', () => {
       lastPushed: undefined | T
       lastSearched: undefined | T
 
+      find(
+        keyOrMatcher: string | ((value: T, index: number, obj: T[]) => unknown),
+      ) {
+        if (typeof keyOrMatcher === 'string') {
+          // @ts-expect-error
+          return super.find(x => x.key === keyOrMatcher)
+        }
+
+        return super.find(keyOrMatcher)
+      }
+
       push(item: T) {
         this.lastPushed = item
         return super.push(item)
@@ -266,6 +277,16 @@ describe('reactivity/reactive/Array', () => {
       index = observed.indexOf(6)
       expect(index).toBe(2)
       expect(observed.lastSearched).toBe(6)
+    })
+
+    test('calls augmented methods on Array subclass', () => {
+      const foo = { key: 'foo' }
+
+      const subArray = new SubArray(foo)
+      const observed = reactive(subArray)
+
+      expect(subArray.find('foo')).toBe(foo)
+      expect(observed.find('foo')).toBe(foo)
     })
   })
 
